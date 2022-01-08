@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class LinearSearch{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner sc = new Scanner(System.in);
+    int n =sc.nextInt();
+    int [] arr = new int[n];
+   
+    
+    for(int i=0 ; i<n; i++){
+        arr[i] = sc.nextInt();// taking input
+    }
+    
+     int d = sc.nextInt();
+    int ans = Linearsearch(arr,d);// call func.
+    System.out.println(ans);
+ }
+ 
+ public static int Linearsearch(int [] arr, int d){
+        int idx = -1;
+     for(int i=0; i<arr.length; i++){
+      
+         if(d == arr[i]){
+            idx = i;
+             break;
+         }
+     }
+     return idx;
+ }
+
+}
